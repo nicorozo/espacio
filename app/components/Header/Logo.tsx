@@ -6,9 +6,9 @@ const Logo = () => {
     <Link href={"./"}>
       <Image
         src={"/logo.svg"}
-        fill={true}
+        height={40}
+        width={100}
         alt="Logo Espacio"
-        style={{ color: "var(--background)" }}
       ></Image>
     </Link>
   );

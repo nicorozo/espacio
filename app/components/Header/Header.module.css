@@ -3,8 +3,9 @@
   top: 0;
   z-index: 1000;
   height: 100px;
-    background-color: var(--foreground);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--black);
+  padding: 1rem;
 }
 .nav{
 display: flex;

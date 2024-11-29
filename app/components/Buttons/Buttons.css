@@ -1,0 +1,7 @@
+.button_main{
+    background-color: transparent;
+    display: flex;
+    padding: 1rem 2rem;
+    border: 2px solid var(--foreground);
+    color: var(--foreground);
+}
