@@ -5,11 +5,34 @@
     width: 100%;
     height: 90vh;
 }
-.hero_div{
+.hero_div.left{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 2;
+    padding: 1rem;
 }
 .hero_tags-container{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
     color: var(--tertiary);
+    font-size: .8rem;
+}
+/* .hero_tags-container:nth-child(2){
+    border-left: 1px solid var(--tertiary);
+    border-right: 1px solid var(--tertiary);
+} */
+.hero_h1{
+    font-size: 4rem;
+    line-height: 4.2rem;
+}
+.hero_div.image_parent{
+    height: 100%;
+    flex: 3;
+}
+.hero_image{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
 }

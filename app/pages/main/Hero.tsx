@@ -6,23 +6,22 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <div className="hero">
-      <div className="hero_div">
+      <div className="hero_div left">
         <div className="hero_tags-container">
           <span className="hero_tag">EVENTS</span>
           <span className="hero_tag">WEDDINGS</span>
           <span className="hero_tag">YOUTUBE</span>
         </div>
-        <h1>Event Photography & Video in Wroclaw</h1>
+        <h1 className="hero_h1">Event photography & video in Wroclaw</h1>
         {/* 	&#322; wroc */}
         <Button>Contact</Button>
       </div>
-      <div className="hero_div">
+      <div className="hero_div image_parent">
         <Image
           className="hero_image"
-          src={"/hero_picture.jpg"}
-          width={100}
-          height={100}
-          objectFit="contain"
+          src={"/hero_picture2.jpg"}
+          width={1000}
+          height={1000}
           alt="Hero Band picture"
         />
       </div>

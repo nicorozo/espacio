@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href={"./"}>
+    <Link href={"./"} style={{ display: "flex", alignItems: "center" }}>
       <Image
         src={"/logo.svg"}
-        height={40}
-        width={100}
+        height={35}
+        width={125}
         alt="Logo Espacio"
       ></Image>
     </Link>
