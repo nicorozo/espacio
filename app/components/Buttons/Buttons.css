@@ -1,7 +1,8 @@
 .button_main{
     background-color: transparent;
-    display: flex;
+    display: inline-flex;
     padding: 1rem 2rem;
     border: 2px solid var(--foreground);
     color: var(--foreground);
+    max-width: max-content;
 }
