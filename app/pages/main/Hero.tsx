@@ -14,7 +14,7 @@ const Hero = () => {
         </div>
         <h1 className="hero_h1">Event photography & video in Wroclaw</h1>
         {/* 	&#322; wroc */}
-        <Button>Contact</Button>
+        <Button className="button_main">Contact</Button>
       </div>
       <div className="hero_div image_parent">
         <Image

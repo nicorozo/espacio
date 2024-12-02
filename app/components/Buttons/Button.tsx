@@ -2,10 +2,11 @@
 import "./Buttons.css";
 interface btnProps {
   children: string;
+  className: string;
 }
 
 const Button = (props: btnProps) => {
-  return <button className="button_main">{props.children}</button>;
+  return <button className={props.className}>{props.children}</button>;
 };
 
 export default Button;

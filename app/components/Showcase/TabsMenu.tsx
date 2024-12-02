@@ -59,8 +59,9 @@ export default function BasicTabs() {
           title="Events"
           subtitle="Highlighting memorable gatherings."
           tags="not yet"
-          description="Events bring people together, creating unforgettable memories that deserve to be preserved. From bustling community festivals and lively private celebrations to high-energy sporting matches, we focus on documenting the atmosphere and human connections that make each event unique. Our expertise ensures that every important moment is captured, delivering visuals that tell the story of your event from start to finish."
-          buttonText="Contact"
+          description="Events bring people together, creating 
+          unforgettable memories that deserve to be preserved.
+           From bustling community festivals and lively private celebrations to high-energy sporting matches, we focus on documenting the atmosphere and human connections that make each event unique. Our expertise ensures that every important moment is captured, delivering visuals that tell the story of your event from start to finish."
           imgSrc="/hero_picture.jpg"
           imgAlt="Event image"
         />
