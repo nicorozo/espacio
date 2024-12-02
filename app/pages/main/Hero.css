@@ -38,7 +38,7 @@
     object-position: center;
     object-fit: cover;
 }
-@media (min-width: 480px) {
+@media (min-width: 780px) {
     .hero {
         flex-direction: row;
     }

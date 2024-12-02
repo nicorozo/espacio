@@ -1,0 +1,25 @@
+.block{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--foreground);
+    color: var(--background);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    padding: 2rem;
+    border-left: 2px solid var(--tertiary);
+    border-right: 2px solid var(--tertiary);
+    gap: 2rem;
+}
+@media (min-width: 780px) {
+    .container{
+        flex-direction: row;
+    }
+}
