@@ -4,6 +4,9 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Showcase from "./Showcase";
+import { eventsData } from "./events";
+import { ThemeProvider } from "@emotion/react";
+import { myTheme } from "../../theme";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -42,36 +45,39 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
-        </Tabs>
+    <ThemeProvider theme={myTheme}>
+      <Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+            textColor="secondary"
+            indicatorColor="secondary"
+          >
+            {eventsData.map((event, index) => (
+              <Tab
+                sx={{ fontWeight: "600" }}
+                label={event.title}
+                {...a11yProps(index)}
+                key={`tab-${event.title}`}
+              />
+            ))}
+          </Tabs>
+        </Box>
+        {eventsData.map((event, index) => (
+          <CustomTabPanel value={value} index={index} key={event.title}>
+            <Showcase
+              title={event.title}
+              subtitle={event.subtitle}
+              tags={event.tags}
+              description={event.description}
+              imgSrc={event.imgSrc}
+              imgAlt={event.imgAlt}
+            />
+          </CustomTabPanel>
+        ))}
       </Box>
-      <CustomTabPanel value={value} index={0}>
-        <Showcase
-          title="Events"
-          subtitle="Highlighting memorable gatherings."
-          tags="not yet"
-          description="Events bring people together, creating 
-          unforgettable memories that deserve to be preserved.
-           From bustling community festivals and lively private celebrations to high-energy sporting matches, we focus on documenting the atmosphere and human connections that make each event unique. Our expertise ensures that every important moment is captured, delivering visuals that tell the story of your event from start to finish."
-          imgSrc="/hero_picture.jpg"
-          imgAlt="Event image"
-        />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        Item Two
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        Item Three
-      </CustomTabPanel>
-    </Box>
+    </ThemeProvider>
   );
 }

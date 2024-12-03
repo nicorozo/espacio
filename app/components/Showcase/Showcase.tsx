@@ -5,7 +5,7 @@ import Image from "next/image";
 interface Props {
   title: string;
   subtitle: string;
-  tags: any;
+  tags: string[];
   description: string;
   buttonText?: string;
   imgSrc: string;
@@ -19,7 +19,11 @@ const Showcase = (props: Props) => {
       <div className={styles.left_container}>
         <h2 className={styles.title}>{title}</h2>
         <h5 className={styles.subtitle}>{subtitle}</h5>
-        <div className={styles.tags}>{tags}</div>
+        <div className={styles.tags}>
+          {tags.map((tag, index) => (
+            <span key={index}>{tag}</span>
+          ))}
+        </div>
         <div className={styles.description}>{description}</div>
         <Button className="button_main">Contact</Button>
       </div>
