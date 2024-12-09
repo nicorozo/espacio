@@ -10,8 +10,10 @@ const Hero = () => {
       <div className="hero_div left ">
         <div className="hero_tags-container">
           <span className="hero_tag">EVENTS</span>
+          <span className="hero_tag">|</span>
           <span className="hero_tag">WEDDINGS</span>
-          <span className="hero_tag">YOUTUBE</span>
+          <span className="hero_tag">|</span>
+          <span className="hero_tag">EDITION</span>
         </div>
         <h1 className="hero_h1 cornerParent">
           <Corners />

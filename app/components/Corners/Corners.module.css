@@ -5,12 +5,12 @@
     border: 2px solid var(--tertiary);
     width: 5rem;
     aspect-ratio: 1/1;
-    border-width:  1rem 0 0 1rem;
+    border-width:  .5rem 0 0 .5rem;
 }
 .corner.bottom{
     top: auto;
     left: auto;
     bottom: 0;
     right: 0;
-    border-width:   0 1rem 1rem 0;
+    border-width:   0 .5rem .5rem 0;
 }

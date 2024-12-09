@@ -19,13 +19,15 @@
     gap: .2rem;
     color: var(--tertiary);
     font-size: .8rem;
+    font-weight: 600;
     max-width: max-content;
+    margin-bottom: 1rem;
 }
 .hero_h1{
     box-sizing: border-box;
     padding: 2rem;
-    font-size: 4rem;
-    line-height: 4.2rem;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
 
 }
 .hero_h1.cornerParent{
@@ -44,5 +46,9 @@
 @media (min-width: 780px) {
     .hero {
         flex-direction: row;
+    }
+    .hero_h1{
+        font-size: 4rem;
+    line-height: 4.2rem;
     }
 }
