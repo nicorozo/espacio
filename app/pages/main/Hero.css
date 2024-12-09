@@ -11,7 +11,9 @@
     flex-direction: column;
     flex: 2;
     padding: 1rem;
+
 }
+
 .hero_tags-container{
     display: flex;
     gap: .2rem;
@@ -19,14 +21,15 @@
     font-size: .8rem;
     max-width: max-content;
 }
-/* .hero_tags-container:nth-child(2){
-    border-left: 1px solid var(--tertiary);
-    border-right: 1px solid var(--tertiary);
-} */
 .hero_h1{
+    box-sizing: border-box;
+    padding: 2rem;
     font-size: 4rem;
     line-height: 4.2rem;
 
+}
+.hero_h1.cornerParent{
+    position: relative;
 }
 .hero_div.image_parent{
     height: 100%;

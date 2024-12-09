@@ -1,11 +1,16 @@
+import React from "react";
 import styles from "./Corners.module.css";
 
-type Props = {
-  children: string | JSX.Element | JSX.Element[];
-};
+interface CornersProps {
+  isCornerBottom?: boolean;
+}
 
-const Corners = ({ children }: Props) => {
-  return <div className={styles.wrapper}>{children}</div>;
+const Corners: React.FC<CornersProps> = ({ isCornerBottom }) => {
+  return (
+    <div
+      className={`${styles.corner} ${isCornerBottom && styles.bottom}`}
+    ></div>
+  );
 };
 
 export default Corners;
