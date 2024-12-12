@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Hind, Libre_Franklin } from "next/font/google";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import "./globals.css";
 
-export const hind = Hind({
+const hind = Hind({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-export const libre_franklin = Libre_Franklin({
+const libre_franklin = Libre_Franklin({
   subsets: ["latin"],
   variable: "--font-libre-franklin",
 });
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${hind.className} ${libre_franklin.variable}`}>
         <Header></Header>
         {children}
+        <Footer />
       </body>
     </html>
   );

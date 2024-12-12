@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--foreground);
+    align-items: center;
+    padding: 2rem;
+    color: var(--background);
+}
+.upperContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.spacer{
+    width: 90%;
+    height: 1px;
+    background-color: var(--background);
+}
+.lowerSection{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.loweSides{
+    display: flex;
+    width: 100%;
+}
+.lowerSideSeparator{
+    display: flex;
+    width: 100%;
+    gap: .5rem;
+}

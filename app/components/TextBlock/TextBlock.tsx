@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
 import styles from "./TextBlock.module.css";
 
 interface TextProps {
-  children: string | JSX.Element | JSX.Element[] | unknown | undefined;
+  children: string | JSX.Element | JSX.Element[] | ReactNode | undefined;
 }
 
 /* const Text = (props: TextProps) => {
