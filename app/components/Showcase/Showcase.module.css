@@ -25,10 +25,14 @@
 }
 .tags{
     color: var(--tertiary);
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     font-family: var(--font-libre-franklin);
     margin: 1rem 0;
     gap: .4rem;
+}
+.tag{
+    border-radius: 25%;
 }
 .description{
     font-family: var(--font-libre-franklin);

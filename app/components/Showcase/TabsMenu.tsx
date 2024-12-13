@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import Showcase from "./Showcase";
 import { eventsData } from "./servicesData";
 import { ThemeProvider } from "@emotion/react";
-import { myTheme } from "../../theme";
+import { lightTheme } from "../../theme";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -45,14 +45,14 @@ export default function BasicTabs() {
   };
 
   return (
-    <ThemeProvider theme={myTheme}>
+    <ThemeProvider theme={lightTheme}>
       <Box>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Tabs
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
-            textColor="secondary"
+            textColor="primary"
             indicatorColor="secondary"
           >
             {eventsData.map((event, index) => (

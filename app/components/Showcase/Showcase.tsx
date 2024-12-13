@@ -21,7 +21,9 @@ const Showcase = (props: Props) => {
         <h5 className={styles.subtitle}>{subtitle}</h5>
         <div className={styles.tags}>
           {tags.map((tag, index) => (
-            <span key={index}>{tag}</span>
+            <span className={styles.tag} key={index}>
+              {tag}
+            </span>
           ))}
         </div>
         <div className={styles.description}>{description}</div>
