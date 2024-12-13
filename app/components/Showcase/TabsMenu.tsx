@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Showcase from "./Showcase";
-import { eventsData } from "./events";
+import { eventsData } from "./servicesData";
 import { ThemeProvider } from "@emotion/react";
 import { myTheme } from "../../theme";
 
