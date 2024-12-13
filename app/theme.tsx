@@ -1,7 +1,12 @@
 import { createTheme } from "@mui/material";
 
 export const myTheme = createTheme({
-  palette: {
-    secondary: { main: "#ffc300" },
+  colorSchemes: {
+    mode: 'dark',{
+      primary:{
+        main: '#0a0a0a',
+        secondary:'#ededed'
+      }
+    }
   },
 });
