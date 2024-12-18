@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hind, Libre_Franklin } from "next/font/google";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
 const hind = Hind({
@@ -34,6 +35,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleTagManager gtmId="G-81B0L1LQL1" />
     </html>
   );
 }
