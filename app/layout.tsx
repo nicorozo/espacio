@@ -18,6 +18,34 @@ export const metadata: Metadata = {
   title: "Event Photography & Video Services in Wrocław – Espacio.pl",
   description:
     "Professional photography and video services for weddings, corporate events, and celebrations in Wrocław",
+  openGraph: {
+    title: "Espacio",
+    description: "Professional Photography and Video services",
+    url: "https://espacio.pl",
+    siteName: "Espacio",
+    images: [
+      {
+        url: "https://espacio.pl/services_espacio.png", // Must be an absolute URL
+        width: 800,
+        height: 800,
+      },
+      {
+        url: "https://espacio.pl/services_espacio.png", // Must be an absolute URL
+        width: 1800,
+        height: 1800,
+        alt: "Espacio ",
+      },
+    ],
+    videos: [
+      {
+        url: "https://espacio.pl/intro.mp4", // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
