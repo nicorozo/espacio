@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hind, Libre_Franklin } from "next/font/google";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import { ThemeProvider } from "next-themes";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
@@ -54,13 +55,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
       </head>
       <body className={`${hind.className} ${libre_franklin.variable}`}>
         <Header></Header>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
         <Footer />
       </body>
       <GoogleTagManager gtmId="G-81B0L1LQL1" />

@@ -6,7 +6,9 @@ import Box from "@mui/material/Box";
 import Showcase from "./Showcase";
 import { eventsData } from "./servicesData";
 import { ThemeProvider } from "@emotion/react";
-import { lightTheme } from "../../theme";
+import { lightTheme, darkTheme } from "../../theme";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -37,15 +39,33 @@ function a11yProps(index: number) {
   };
 }
 
+//Next.js Theme
+function ThemeDetector() {
+  const { theme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return lightTheme; // Prevent hydration mismatch
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
+  console.log(currentTheme);
+
+  return currentTheme === "light" ? lightTheme : darkTheme;
+}
+
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+  //Detect Theme
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={ThemeDetector()}>
       <Box>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Tabs
